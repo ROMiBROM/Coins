@@ -1,18 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import {  useMemo } from "react";
 
 const NavBar = ()=>{
-    const location = useLocation();
-  const [activeLink, setActiveLink] = useState("");
 
-  useEffect(() => {
+  const location = useLocation();
+
+  const activeLink = useMemo(() => {
     switch(location.pathname) {
-      case "/": setActiveLink("coins") 
-      break;
-      case "/exchanges": setActiveLink("exchanges")
-      break;
-      default: setActiveLink("")
-      break;
+      case "/": return "coins"
+      case "/exchanges": return "exchanges"
+      default: return ""
   }}, [location.pathname]);
 
     return(

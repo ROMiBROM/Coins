@@ -18,3 +18,19 @@ body{
   font-weight: bold; 
   color: gold; 
 }
+.antd_table{
+  display: flex;
+  justify-content: center;
+}
+.antd_table td{
+  text-align: center;
+}
+.antd_table th{
+  text-align: center!important;
+}
+.spin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
